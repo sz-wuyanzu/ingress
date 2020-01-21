@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+  namespace: default
+spec:
+  rules:
+  - host: myapp.klvchen.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: myapp
+          servicePort: 80
